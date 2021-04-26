@@ -17,20 +17,20 @@ use function Mos\Functions\{
 /**
  * Controller showing how to work with forms.
  */
-class Yatsy
+class Yatzy
 {
     public function index(): ResponseInterface
     {
-        if (!isset($_SESSION["yatsy"])) {
-            $_SESSION["yatsy"] = new \Manh20\Yatsy\Game();
+        if (!isset($_SESSION["yatzy"])) {
+            $_SESSION["yatzy"] = new \Manh20\Yatzy\Game();
         }
      
         $data = [
-            "game" => $_SESSION["yatsy"],
+            "game" => $_SESSION["yatzy"],
             "checked_dice" => $_GET["dice"] ?? []
         ];
 
-        $body = renderView("layout/yatsy.php", $data);
+        $body = renderView("layout/yatzy.php", $data);
 
         $psr17Factory = new Psr17Factory();
         return $psr17Factory
@@ -40,16 +40,16 @@ class Yatsy
 
     public function reset(): ResponseInterface
     {
-        unset($_SESSION["yatsy"]);
+        unset($_SESSION["yatzy"]);
 
         return (new Response())
             ->withStatus(301)
-            ->withHeader("Location", url("/yatsy"));
+            ->withHeader("Location", url("/yatzy"));
     }
 
     public function roll(): ResponseInterface
     {
-        $_SESSION["yatsy"]->roll($_POST["dice"] ?? null);
+        $_SESSION["yatzy"]->roll($_POST["dice"] ?? null);
 
         $query = http_build_query([
             "dice" => $_POST["dice"] ?? []
@@ -57,20 +57,20 @@ class Yatsy
 
         return (new Response())
             ->withStatus(301)
-            ->withHeader("Location", url("/yatsy?$query"));
+            ->withHeader("Location", url("/yatzy?$query"));
     }
 
     public function store(): ResponseInterface
     {
         if ($_POST["action"] === "strike") {
-            $_SESSION["yatsy"]->strike($_POST["row"]);
+            $_SESSION["yatzy"]->strike($_POST["row"]);
         } else
         if ($_POST["action"] === "store") {
-            $_SESSION["yatsy"]->store($_POST["row"]);
+            $_SESSION["yatzy"]->store($_POST["row"]);
         }
 
         return (new Response())
             ->withStatus(301)
-            ->withHeader("Location", url("/yatsy"));
+            ->withHeader("Location", url("/yatzy"));
     }
 }

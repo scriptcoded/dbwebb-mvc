@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Manh20\Yatsy;
+namespace Manh20\Yatzy;
 
 class Game {
   private $board;

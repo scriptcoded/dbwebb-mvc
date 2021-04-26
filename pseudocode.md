@@ -1,4 +1,4 @@
-# Pseudocode for Yatsy
+# Pseudocode for Yatzy
 
 ```
 func roll:

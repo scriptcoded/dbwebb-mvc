@@ -22,11 +22,11 @@ footer {
     clear: both;
 }
 
-.yatsy-board {
+.yatzy-board {
     font-size: 1.5rem;
 }
 
-.yatsy-board-table {
+.yatzy-board-table {
     border: 2px solid black;
     border-radius: 4px;
     font-family: monospace;
@@ -34,35 +34,35 @@ footer {
     border-spacing: 0;
 }
 
-.yatsy-board-table tr:first-child td {
+.yatzy-board-table tr:first-child td {
     padding-top: 10px;
 }
-.yatsy-board-table tr:last-child td {
+.yatzy-board-table tr:last-child td {
     padding-bottom: 10px;
 }
 
-.yatsy-board-table td {
+.yatzy-board-table td {
     padding: 4px 14px 0;
 }
-.yatsy-board-table td:nth-child(2) {
+.yatzy-board-table td:nth-child(2) {
     min-width: 2rem;
 }
 
-.yatsy-board-table td:not(:last-child) {
+.yatzy-board-table td:not(:last-child) {
     border-right: 2px solid black;
 }
 
-.yatsy-dice-set {
+.yatzy-dice-set {
     display: flex;
 }
 
-.yatsy-dice-set__dice {
+.yatzy-dice-set__dice {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-.yatsy-dice-set__dice pre {
+.yatzy-dice-set__dice pre {
     margin: 0;
     cursor: pointer;
     user-select: none;

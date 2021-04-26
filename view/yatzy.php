@@ -12,22 +12,22 @@ use function Mos\Functions\{
 
 ?>
 
-<h1>Yatsy</h1>
+<h1>Yatzy</h1>
 
-<form method="POST" action="<?= url("/yatsy/reset") ?>">
+<form method="POST" action="<?= url("/yatzy/reset") ?>">
   <button type="submit">Reset</button>
 </form>
 
 <br>
 
-<table class="yatsy-board-table">
+<table class="yatzy-board-table">
   <tbody>
     <?php foreach ($game->get_board()->get_rows() as $id => $row) { ?>
       <tr>
         <td><?= $row["text"] ?></td>
         <td><?= $row["display_value"] ?></td>
         <td>
-          <form method="POST" action="<?= url("/yatsy/store") ?>">
+          <form method="POST" action="<?= url("/yatzy/store") ?>">
             <input type="hidden" name="row" value="<?= $id ?>">
   
             <?php if ($row["value"] === null) { ?>
@@ -46,10 +46,10 @@ use function Mos\Functions\{
 
 <p>Rolls left: <?= $game->get_rolls_left() ?></p>
 
-<form method="POST" action="<?= url("/yatsy/roll") ?>">
-  <div class="yatsy-dice-set">
+<form method="POST" action="<?= url("/yatzy/roll") ?>">
+  <div class="yatzy-dice-set">
     <?php foreach ($game->get_dice() as $i => $dice) { ?>
-      <div class="yatsy-dice-set__dice">
+      <div class="yatzy-dice-set__dice">
         <label for="dice_<?= $i ?>">
           <pre><?= $dice->draw() ?></pre>
         </label>
