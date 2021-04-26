@@ -21,3 +21,49 @@ footer {
     display: table;
     clear: both;
 }
+
+.yatsy-board {
+    font-size: 1.5rem;
+}
+
+.yatsy-board-table {
+    border: 2px solid black;
+    border-radius: 4px;
+    font-family: monospace;
+    font-size: 1.5rem;
+    border-spacing: 0;
+}
+
+.yatsy-board-table tr:first-child td {
+    padding-top: 10px;
+}
+.yatsy-board-table tr:last-child td {
+    padding-bottom: 10px;
+}
+
+.yatsy-board-table td {
+    padding: 4px 14px 0;
+}
+.yatsy-board-table td:nth-child(2) {
+    min-width: 2rem;
+}
+
+.yatsy-board-table td:not(:last-child) {
+    border-right: 2px solid black;
+}
+
+.yatsy-dice-set {
+    display: flex;
+}
+
+.yatsy-dice-set__dice {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.yatsy-dice-set__dice pre {
+    margin: 0;
+    cursor: pointer;
+    user-select: none;
+}

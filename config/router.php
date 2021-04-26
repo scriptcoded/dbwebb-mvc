@@ -43,3 +43,10 @@ $router->addGroup("/game21", function (RouteCollector $router) {
     $router->addRoute("POST", "/stop", ["\Manh20\Controller\Game21", "stop"]);
     $router->addRoute("POST", "/next-round", ["\Manh20\Controller\Game21", "next_round"]);
 });
+
+$router->addGroup("/yatsy", function (RouteCollector $router) {
+    $router->addRoute("GET", "", ["\Manh20\Controller\Yatsy", "index"]);
+    $router->addRoute("POST", "/reset", ["\Manh20\Controller\Yatsy", "reset"]);
+    $router->addRoute("POST", "/roll", ["\Manh20\Controller\Yatsy", "roll"]);
+    $router->addRoute("POST", "/store", ["\Manh20\Controller\Yatsy", "store"]);
+});

@@ -9,7 +9,8 @@
             "Manh20\\": "src/"
         },
         "files": [
-            "src/functions.php"
+            "src/functions.php",
+            "src/util.php"
         ]
     },
     "require-dev": {

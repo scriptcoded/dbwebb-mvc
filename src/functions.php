@@ -21,6 +21,7 @@ function getRoutePath(): string
 {
     $offset = strlen(dirname($_SERVER["SCRIPT_NAME"]));
     $path   = substr($_SERVER["REQUEST_URI"], $offset);
+    $path = preg_replace('/\?.*/', '', $path);
 
     return $path;
 }
