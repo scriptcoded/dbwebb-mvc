@@ -189,7 +189,7 @@ FOUND 105 ERRORS AFFECTING 78 LINES
   82 | ERROR | [x] Line indented incorrectly; expected at least 8 spaces, found 4
   83 | ERROR | [x] Line indented incorrectly; expected 4 spaces, found 2
   85 | ERROR | [x] Line indented incorrectly; expected 4 spaces, found 2
-  85 | ERROR | [ ] Method name "Game::play__computer" is not in camel caps format
+  85 | ERROR | [ ] Method name "Game::play_computer" is not in camel caps format
   85 | ERROR | [x] Opening brace should be on a new line
   86 | ERROR | [x] Line indented incorrectly; expected 8 spaces, found 4
   87 | ERROR | [x] Line indented incorrectly; expected at least 12 spaces, found 6

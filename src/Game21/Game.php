@@ -46,7 +46,7 @@ class Game {
   }
 
   public function get_points_computer() {
-    return $this->points_player;
+    return $this->points_computer;
   }
 
   public function roll() {
@@ -81,7 +81,7 @@ class Game {
     return $this->winner;
   }
 
-  public function play__computer() {
+  public function play_computer() {
     while ($this->points_computer < 21) {
       $this->hand->roll();
 
