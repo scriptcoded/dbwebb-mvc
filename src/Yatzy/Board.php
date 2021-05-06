@@ -8,45 +8,44 @@ use function Manh20\Util\mb_str_pad;
 
 mb_internal_encoding("utf-8");
 
-function single_score_filter ($rolls, $score) {
-  $valid_rolls = [];
-
-  foreach ($rolls as $roll) {
-    if ($roll === $score) {
-      array_push($valid_rolls, $roll);
-    }
-  }
-
-  return $valid_rolls;
-}
-
 class Board {
+  private function single_score_filter ($rolls, $score) {
+    $valid_rolls = [];
+  
+    foreach ($rolls as $roll) {
+      if ($roll === $score) {
+        array_push($valid_rolls, $roll);
+      }
+    }
+  
+    return $valid_rolls;
+  }
 
   private function get_row_types () {
     return [
       "ones" => [
         "text" => "1 ⚀",
-        "filter" => function ($rolls) { return single_score_filter($rolls, 1); }
+        "filter" => function ($rolls) { return $this->single_score_filter($rolls, 1); }
       ],
       "twos" => [
         "text" => "2 ⚁",
-        "filter" => function ($rolls) { return single_score_filter($rolls, 2); }
+        "filter" => function ($rolls) { return $this->single_score_filter($rolls, 2); }
       ],
       "threes" => [
         "text" => "3 ⚂",
-        "filter" => function ($rolls) { return single_score_filter($rolls, 3); }
+        "filter" => function ($rolls) { return $this->single_score_filter($rolls, 3); }
       ],
       "fours" => [
         "text" => "4 ⚃",
-        "filter" => function ($rolls) { return single_score_filter($rolls, 4); }
+        "filter" => function ($rolls) { return $this->single_score_filter($rolls, 4); }
       ],
       "fives" => [
         "text" => "5 ⚄",
-        "filter" => function ($rolls) { return single_score_filter($rolls, 5); }
+        "filter" => function ($rolls) { return $this->single_score_filter($rolls, 5); }
       ],
       "sixes" => [
         "text" => "6 ⚅",
-        "filter" => function ($rolls) { return single_score_filter($rolls, 6); }
+        "filter" => function ($rolls) { return $this->single_score_filter($rolls, 6); }
       ]
     ];
   }
