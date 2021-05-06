@@ -43,4 +43,15 @@ class DiceTest extends TestCase
         
         $this->assertEquals($res, $dice->get_last_roll());
     }
+
+    /**
+     * Try draw.
+     */
+    public function testDraw()
+    {
+        $dice = new Dice(6);
+        $res = $dice->draw();
+
+        $this->assertStringStartsWith("╭", $res);
+    }
 }
