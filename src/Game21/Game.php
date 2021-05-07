@@ -12,7 +12,7 @@ class Game {
   private int $points_player = 0;
   private int $points_computer = 0;
   private ?int $dice_count = null;
-  private $hand;
+  public $hand;
 
   private int $wins_player = 0;
   private int $wins_computer = 0;
